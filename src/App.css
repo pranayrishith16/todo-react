@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+  height: 100vh;
+  margin: 0 auto;
+  width: 60vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input{
+  width: 70%;
+  margin: 25px auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.input-box-for-todo{
+  width: 70%;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.input-box-for-todo:focus{
+  background-color: #EBF3FF;
+}
+
+.todo{
+  /* border: 1px solid black; */
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  padding: 5px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  transition: ease-in-out 0.1s;
+}
+
+.todo:hover{
+  background-color: #EBEBEB;
+}
+
+.todo h4{
+  padding-left: 8px;
+  font-weight: 500;
+}
+
+.done h4{
+  text-decoration: line-through;  
+  opacity: 0.6;
+}
+
+input[type="checkbox"]{
+  border-radius: 50%;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 6px 17px;
+  font-size: 16px;
+  background-color: #0079c1;
   color: white;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover{
+  background-color: #0069a8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.all-todos{
+  margin: 15px auto;
+  width: 85%;
+}
+
+.all-todos h5{
+  border-bottom: 2px solid black;
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+.all-todos p{
+  opacity: 0.4;
+  user-select: none;
+}
+
+
+@media only screen and (max-width:450px) {
+  .input{
+    flex-direction: column;
+    margin-bottom: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-box-for-todo{
+    margin-bottom: 7px;
   }
 }
